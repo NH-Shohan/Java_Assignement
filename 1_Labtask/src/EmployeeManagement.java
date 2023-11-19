@@ -46,12 +46,12 @@ public class EmployeeManagement {
 }
 
 class Employee {
-    private String id;
-    private String name;
-    private Date dateOfBirth;
-    private String email;
-    private Date joiningDate;
-    private EmployeeType type;
+    private final String id;
+    private final String name;
+    private final Date dateOfBirth;
+    private final String email;
+    private final Date joiningDate;
+    private final EmployeeType type;
 
     public Employee(String id, String name, Date dateOfBirth, String email, Date joiningDate, EmployeeType type) {
         this.id = id;
@@ -80,9 +80,9 @@ class Employee {
         int joinYear = joiningDate.getYear();
         int totalDaysInYear = isLeapYear(currentYear) ? 366 : 365;
 
-        if (type == targetType && joinYear == currentYear) {
+        if (targetType == type && joinYear == currentYear) {
             int lastDateOfYear = isLeapYear(currentYear) ? 366 : 365;
-            double leave = ((lastDateOfYear - joiningDate.getDate() + 1) * totalLeaveDays) / totalDaysInYear;
+            double leave = (double) ((lastDateOfYear - joiningDate.getDate() + 1) * totalLeaveDays) / totalDaysInYear;
             return (leave < 0.5) ? (int) Math.floor(leave) : (int) Math.ceil(leave);
         } else {
             return 0;
