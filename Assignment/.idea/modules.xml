@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SecondApplication.iml" filepath="$PROJECT_DIR$/SecondApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Advanced_Java_Mid-term_Assignment.iml" filepath="$PROJECT_DIR$/.idea/Advanced_Java_Mid-term_Assignment.iml" />
     </modules>
   </component>
 </project>
